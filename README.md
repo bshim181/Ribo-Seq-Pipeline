@@ -23,7 +23,7 @@ R                         4.1
   1. *Primary Assembly / Gene Annotation File* : Only tested on Gencode annotations
   2. Build rRNA Reference file
 
-## rRNA Reference 
+### rRNA Reference 
 
 A good resource for rRNA sequences is RNAcentral, a database of non-coding RNA from multiple databases such as Rfam and RDP (Ribosomal Database Project).
 Download and merge RNAcentral FASTA files:
@@ -61,6 +61,28 @@ zcat rnacentral.ribosomal.nowrap.fasta.gz \
 ```
 Code is taken from https://github.com/igordot/genomics/blob/master/workflows/rrna-ref.md
 
+
+# Step 2. Setting up Ribotricer and RibORF
+
+Setting up Ribotricer 
+
+```
+conda create -n ribotricer_env -c bioconda ribotricer
+conda activate ribotricer_env
+```
+
+```
+ribotricer prepare-orfs --gtf {GTF} --fasta {FASTA} --prefix output_directory/file_name.tsv
+```
+
+Setting up RibORF
+
+```
+wget https://github.com/zhejilab/RibORF/tree/master/RibORF.2.0
+RibORF=source_dir/RibORF.2.0
+```
+
+# Step 3: 
 
 
      
