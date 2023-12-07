@@ -18,6 +18,19 @@ R                         4.1
 
 # Step 1. Preparation Stage 
 
+## Setting up your Conda Environment for the Pipeline
+
+```
+# using .yml file 
+conda env create -f environment.yml
+
+# using pip
+pip install -r requirements.txt
+
+# using Conda
+conda create --name ribo_seq --file requirements.txt
+```
+
 ## Reference Files 
 
   1. *Primary Assembly / Gene Annotation File* : Only tested on Gencode annotations
