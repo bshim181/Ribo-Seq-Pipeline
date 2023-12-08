@@ -5,6 +5,8 @@ Server: Hosted on Slurm (Kraken)
 
 Functionality: Handles Ribosome Profiling Reads(Single End Fastq Files) to predict potentially translating open reading frames. 
 
+Ribo-seq protocol which the pipeline supports can be found here: https://www.sciencedirect.com/science/article/pii/S1046202316303292?via%3Dihub
+
 *Current Pipeline is compatible with the following specific versions of software:*
 
 ```
