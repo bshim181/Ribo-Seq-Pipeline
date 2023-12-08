@@ -79,9 +79,10 @@ zcat rnacentral.ribosomal.nowrap.fasta.gz \
 Code is taken from https://github.com/igordot/genomics/blob/master/workflows/rrna-ref.md
 
 
-# Step 2. Setting up Ribotricer and RibORF
+# Step 2. Setting up Ribotricer and RibORF 
 
 ## Setting up Ribotricer in your conda environment 
+Ribotricer: https://github.com/smithlabcode/ribotricer
 
 ```
 conda create -n ribotricer_env -c bioconda ribotricer
@@ -98,6 +99,7 @@ ribotricer prepare-orfs --gtf {GTF} --fasta {FASTA} --prefix output_directory/fi
 
 ## Setting up RibORF
 Download source codes from RibORF repository into your source directory. 
+RibORF Github: https://github.com/zhejilab/RibORF/tree/master/RibORF.2.0
 
 ```
 wget https://github.com/zhejilab/RibORF/tree/master/RibORF.2.0
@@ -130,6 +132,24 @@ In the Initial Run, It will automatically generate STAR and Bowtie Index based o
   -k : Skip to specific steps (1~14) 
   -t : Run_Type (Ligation_Free Protocol or Traditional Protocol)
   --samplesheet: TSV File (Column 1: Sample Specific Adapters / Column 2: Sample Fastq Basenames)
+
+  Skip Parameters
+
+  #0 = From the start 
+  #1 = From cutadapt and umi_extraction  
+  #2 = From rRNA removal with bowtie 
+  #3 = From STAR Alignment
+  #4 = Quality Checking with Ribotish 
+  #5 = RiboORF Codon Periodicity Plot 
+  #6 = Search for offset parameters for each sample 
+  #7 = Sam file offset correction for RibORF Prediction
+  #8 = Ribotricer ORF Prediction
+  #9 = RibORF ORF Prediction 
+  #10 = ORF Prediction to Bed Conversion 
+  #11 = Merging RibORF and Ribotricer Predictions 
+  #12 = Remove duplicate ORFs based on start and end position
+  #13 = Calculate ORF TPM
+  #14 = Filter for non-annotated ORFs (non-canonical open reading frames) 
 
   Reference Files
   --rrna : rRNA_Reference_File
