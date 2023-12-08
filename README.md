@@ -1,6 +1,8 @@
 # Ribo-Seq-Pipeline
 Creator: Bohoon Shim 
+
 Server: Hosted on Slurm (Kraken) 
+
 Functionality: Handles Ribosome Profiling Reads(Single End Fastq Files) to predict potentially translating open reading frames. 
 
 *Current Pipeline is compatible with the following specific versions of software:*
