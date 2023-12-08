@@ -104,13 +104,13 @@ Once Ribotricer list of ORFs/Index has been generated, we will convert it to Rib
 
   1. Download genePredToGTF script from UCSC and generate genePred format of your gtf file
      ```
-       wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/gtfToGenePred
-       chmod +x gtfToGenePred
-       ./gtfToGenePred target.gtf target.genePred
+     wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/gtfToGenePred
+     chmod +x gtfToGenePred
+     ./gtfToGenePred target.gtf target.genePred
      ```
   2. Convert Ribotricer Index to RibORF Index Format. This converts list of all possible ORFs into GenePred Format 
      ```
-       python3 utils/transform_index.py --gtf gtf --gene_pred gene_pred --index ribotricer_index --out_dir ${out_dir}/ribORF_index.txt
+     python3 utils/transform_index.py --gtf gtf --gene_pred gene_pred --index ribotricer_index --out_dir ${out_dir}/ribORF_index.txt
      ```
 
 # Step 3: Main nuORF Prediction Script 
