@@ -138,7 +138,7 @@ In the Initial Run, It will automatically generate STAR and Bowtie Index based o
   ./prediction.sh -r run_name -o output -f fastq -s source -k 0 -t Traditional --samplesheet sample.tsv --rrna --reference --gene_annotation --ribotricer_index --gene_pred --ribORF_index
 
 ```
-
+<img width="992" alt="Screenshot 2023-12-08 at 8 19 25 AM" src="https://github.com/bshim181/Ribo-Seq-Pipeline/assets/53489568/023bd481-b60f-438c-bb57-69c091f8be0d">
 
 
      
